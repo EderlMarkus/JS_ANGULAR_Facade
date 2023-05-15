@@ -1,7 +1,25 @@
 <form [formGroup]="searchForm" (ngSubmit)="submit()">
-  <label for="photo-id">Photo-Id:</label>
-  <input id="photo-id" formControlName="id">
-  <label for="album-id">Album-Id:</label>
-  <input id="album-id" formControlName="albumId">
-  <button type="submit" [disabled]="!searchForm.valid">Submit</button>
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Photo-Id:</mat-label>
+        <input matInput placeholder="Ex. 1" formControlName="id" />
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <mat-label>Album-Id:</mat-label>
+        <input matInput placeholder="Ex. 1" formControlName="albumId" />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        color="primary"
+        mat-raised-button
+        type="submit"
+        [disabled]="!searchForm.valid"
+      >
+        Submit
+      </button>
+    </mat-card-actions>
+  </mat-card>
 </form>

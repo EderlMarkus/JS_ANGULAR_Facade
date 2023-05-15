@@ -8,5 +8,5 @@ import {HttpClientModule} from "@angular/common/http";
 
 
 bootstrapApplication(HomeComponent, {
-  providers: [importProvidersFrom(BrowserAnimationsModule), importProvidersFrom(HttpClientModule)],
+  providers: [importProvidersFrom(BrowserAnimationsModule, BrowserAnimationsModule), importProvidersFrom(HttpClientModule)],
 });
